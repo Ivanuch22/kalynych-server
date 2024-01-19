@@ -25,7 +25,7 @@ app.use(fileUpload({}));
 app.use("/api", router);
 
 app.get("/", (req, res) => {
-  res.send("hello postaskldjfals;djfalkdsfjal;ksdjflakjgres + node.js test");
+  res.send(" + node.js test");
 });
 app.get("/hello", (req, res) => {
   res.send("hello postgres + node.js test");

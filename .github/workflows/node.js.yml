@@ -5,13 +5,10 @@ name: Node.js CI/CD
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
     runs-on: self-hosted
-
     strategy:
       matrix:
         node-version: [ 18.x]
@@ -29,4 +26,5 @@ jobs:
     - run: |
         touch .env 
         echo "${{secrets.PROD_ENV_FILE}}" > .env
+        
     - run: pm2 restart BackendApi

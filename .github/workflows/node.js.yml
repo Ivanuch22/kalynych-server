@@ -5,16 +5,13 @@ name: Node.js CI/CD
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
     runs-on: self-hosted
-
     strategy:
       matrix:
-        node-version: [ 18.x]
+        node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -25,8 +22,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-
     - run: |
         touch .env 
-        echo "${{secrets.PROD_ENV_FILE}}" > .env
+        echo "${{secrets.PROD_ENV_FILE }}" > .env
+    - run: pm2 restart BackendApi
     

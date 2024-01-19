@@ -25,10 +25,10 @@ app.use(fileUpload({}));
 app.use("/api", router);
 
 app.get("/", (req, res) => {
-  res.send(" + node.js test");
+  res.send(" sadlkfj+ node.js test");
 });
 app.get("/hello", (req, res) => {
-  res.send("hello postgres + node.js test");
+  res.send("hellsldkajfo postgres + node.js test");
 });
 
 app.use(errorHandler);

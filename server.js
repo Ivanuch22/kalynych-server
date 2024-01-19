@@ -27,6 +27,9 @@ app.use("/api", router);
 app.get("/", (req, res) => {
   res.send("hello postgres + node.js test");
 });
+app.get("/hello", (req, res) => {
+  res.send("hello postgres + node.js test");
+});
 
 app.use(errorHandler);
 

@@ -49,7 +49,7 @@ class UserController {
       } catch {
         console.log("emailer is not working")
       }
-      return res.json({ status: 200, token, userId: user.id });
+      return res.json({ status: 200, access:token.access,refresh: token.refresh, userId: user.id });
 
     } catch (e) {
       return next(ApiError.badRequest(`Incorrect email or password ${e}`));
@@ -201,7 +201,7 @@ class UserController {
     const token = generateJWT.tokens(user.id, user.email, user.current_role);
     generateJWT.updateRefreshToken(user.id, token.refresh);
 
-    return res.json({ token });
+    return res.json({ access:token.access,refresh: token.refresh, });
   }
   async forgotPassword(req, res, next) {
     const { email } = req.body;

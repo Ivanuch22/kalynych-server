@@ -11,7 +11,7 @@ const models = require("./models/models");
 const router = require("./routes/index");
 const errorHandler = require("./middleware/ErrorHandlingMiddleware");
 
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 5500;
 const HOST = process.env.HOST || "0.0.0.0";
 
 const app = express();

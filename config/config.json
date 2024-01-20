@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "postgres",
-    "password": "database-2-password",
+    "password": "0000000000",
     "database": "postgres",
-    "host": "database-2.cluu0mgcc8y7.us-east-1.rds.amazonaws.com",
+    "host": "database-1.c36ycqskmkxg.eu-north-1.rds.amazonaws.com",
     "dialect": "postgres",
     "port": 5432,
     "dialectOptions": {
@@ -15,9 +15,9 @@
   },
   "test": {
     "username": "postgres",
-    "password": "database-2-password",
+    "password": "0000000000",
     "database": "postgres",
-    "host": "database-2.cluu0mgcc8y7.us-east-1.rds.amazonaws.com",
+    "host": "database-1.c36ycqskmkxg.eu-north-1.rds.amazonaws.com",
     "dialect": "postgres",
     "port": 5432,
     "dialectOptions": {
@@ -29,9 +29,9 @@
   },
   "production": {
     "username": "postgres",
-    "password": "database-2-password",
+    "password": "0000000000",
     "database": "postgres",
-    "host": "database-2.cluu0mgcc8y7.us-east-1.rds.amazonaws.com",
+    "host": "database-1.c36ycqskmkxg.eu-north-1.rds.amazonaws.com",
     "dialect": "postgres",
     "port": 5432,
     "dialectOptions": {
